@@ -4,23 +4,25 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
-    <VBox id="VBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" spacing="20">
-        <padding>
-            <Insets top="190" left="50" />
-        </padding>
 
-        <CheckBox fx:id="checkBox1" text="C" onAction="#onClickMethod"/>
-        <CheckBox fx:id="checkBox2" text="S" onAction="#onClickMethod"/>
-        <CheckBox fx:id="checkBox3" text="R" onAction="#onClickMethod"/>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<AnchorPane fx:id="AnchorPane" fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+            maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="800.0">
+    <TextArea fx:id="textArea2" prefHeight="60.0" prefWidth="720.0" layoutY="20" layoutX="40"/>
+    <Button fx:id="button" layoutX="70.0" layoutY="100.0" mnemonicParsing="false" onAction="#onClickMethod"
+            prefHeight="43.5" prefWidth="159.0" text="Start"/>
+    <VBox fx:id="VBox" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+          layoutX="130.0" layoutY="210" spacing="20">
+<!--        <padding>-->
+<!--            <Insets top="210" left="130"/>-->
+<!--        </padding>-->
+
+        <CheckBox fx:id="C" text="C" onAction="#onClickMethod"/>
+        <CheckBox fx:id="S" text="S" onAction="#onClickMethod"/>
+        <CheckBox fx:id="R" text="R" onAction="#onClickMethod"/>
     </VBox>
-    <ImageView fx:id="imageView" layoutY="100"  layoutX="300">
-        <image>
-
-        </image>
-    </ImageView>
+    <TextArea fx:id="textArea" prefHeight="40.0" prefWidth="402.0" layoutY="100" layoutX="330"/>
+    <ImageView fx:id="imageView" layoutY="170" layoutX="330"/>
 </AnchorPane>
